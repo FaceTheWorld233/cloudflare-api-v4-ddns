@@ -26,22 +26,27 @@ set -o pipefail
 # default config
 
 # API key, see https://www.cloudflare.com/a/account/my-account,
-# incorrect api-key results in E_UNAUTH error
+# CloudFlare的全局Global API Key，获取地址：https://dash.cloudflare.com/profile/api-tokens
 CFKEY=
 
 # Username, eg: user@example.com
+# 用户注册的邮箱地址
 CFUSER=
 
 # Zone name, eg: example.com
+# 要设置的主域名
 CFZONE_NAME=
 
 # Hostname to update, eg: homeserver.example.com
+# 要设置的二级域名
 CFRECORD_NAME=
 
 # Cloudflare TTL for record, between 120 and 86400 seconds
+# TTL过期时间
 CFTTL=120
 
 # Ignore local file, update ip anyway
+# 是否开启加速
 FORCE=false
 
 # Site to retrieve WAN ip, other examples are: bot.whatismyipaddress.com, https://api.ipify.org/ ...
